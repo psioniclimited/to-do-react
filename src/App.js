@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
-    <div className="App">
-      <h1>This is react</h1>
+    <div className="">
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </div>
   );
 }
