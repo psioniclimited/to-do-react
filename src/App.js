@@ -9,22 +9,22 @@ class App extends Component {
     this.state = {
       todos: todosData,
     };
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(id) {
     console.log("changed", id);
-    this.setState(prevState => {
-      const updateTodos = prevState.todos.map(todo => {
-        if(todo.id === id){
-          todo.completed = !todo.completed
+    this.setState((prevState) => {
+      const updateTodos = prevState.todos.map((todo) => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed;
         }
-        return todo
-      })
+        return todo;
+      });
       return {
-        todos: updateTodos
-      }
-    })
+        todos: updateTodos,
+      };
+    });
   }
 
   render() {
